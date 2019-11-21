@@ -26,3 +26,9 @@ def FindWordCount(myList, myStr):
         if i == myStr:
             count += 1
     return count
+
+def ScoreFinder(listOne, listTwo, string):
+    if string in listOne or string.capitalize() in listOne:
+        print('OUTPUT', string.capitalize(), 'got a score of', listTwo[listOne.index(string.capitalize())])
+    else:
+        print('OUTPUT player not found')
