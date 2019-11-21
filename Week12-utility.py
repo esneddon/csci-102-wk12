@@ -32,3 +32,6 @@ def ScoreFinder(listOne, listTwo, string):
         print('OUTPUT', string.capitalize(), 'got a score of', listTwo[listOne.index(string.capitalize())])
     else:
         print('OUTPUT player not found')
+
+def Union(listOne, listTwo):
+    return listOne + listTwo
