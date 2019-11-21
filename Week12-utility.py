@@ -6,8 +6,12 @@ def PrintOutput(input_str):
     print('OUTPUT', input_str)
 
 def LoadFile(filename):
+    x = int(0)
     file = open(filename)
     file_list = file.readlines()
+    for i in file_list:
+        file_list[x] = file_list[x].rstrip('\n')
+        x += 1
     return file_list
 
 def UpdateString(stringOne, stringTwo, indexInt):
@@ -15,3 +19,10 @@ def UpdateString(stringOne, stringTwo, indexInt):
     s[indexInt] = stringTwo
     new_str = ''.join(s)
     print("OUTPUT", new_str )
+
+def FindWordCount(myList, myStr):
+    count = int(0)
+    for i in myList:
+        if i == myStr:
+            count += 1
+    return count
